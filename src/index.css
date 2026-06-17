@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --steel-900: #0F1E2E;
+  --steel-800: #1B3A5C;
+  --steel-700: #24507A;
+  --steel-600: #2E6699;
+  --steel-500: #3A7CB8;
+  --steel-400: #5A9CD4;
+  --steel-300: #8BBDE6;
+  --steel-200: #B8D8F0;
+  --steel-100: #E0EEF8;
+
+  --amber-600: #D07A2A;
+  --amber-500: #E8913A;
+  --amber-400: #F0A858;
+  --amber-300: #F5C07A;
+  --amber-200: #FAD9A8;
+  --amber-100: #FEF0DC;
+
+  --gray-50: #F5F6FA;
+  --gray-100: #E8EAF0;
+  --gray-200: #D1D5E0;
+  --gray-300: #B0B6C8;
+  --gray-400: #8B95A8;
+  --gray-500: #6B7688;
+  --gray-600: #525C6E;
+  --gray-700: #3D4555;
+  --gray-800: #2A3040;
+  --gray-900: #1A1F2E;
+
+  --success: #22C55E;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+  --info: #3B82F6;
+
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+body {
+  background-color: var(--gray-50);
+  color: var(--gray-800);
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--gray-100);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gray-300);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-400);
+}
+
+@layer utilities {
+  .text-steel-800 { color: var(--steel-800); }
+  .text-steel-600 { color: var(--steel-600); }
+  .text-steel-500 { color: var(--steel-500); }
+  .text-amber-500 { color: var(--amber-500); }
+  .text-amber-600 { color: var(--amber-600); }
+  .bg-steel-800 { background-color: var(--steel-800); }
+  .bg-steel-900 { background-color: var(--steel-900); }
+  .bg-amber-500 { background-color: var(--amber-500); }
+  .bg-amber-100 { background-color: var(--amber-100); }
+  .border-steel-800 { border-color: var(--steel-800); }
+  .border-amber-500 { border-color: var(--amber-500); }
+
+  .card {
+    @apply bg-white rounded-lg border border-gray-200 shadow-sm;
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 rounded-md text-white text-sm font-medium transition-all duration-200;
+    background-color: var(--steel-800);
+  }
+  .btn-primary:hover {
+    background-color: var(--steel-700);
+    box-shadow: 0 2px 8px rgba(27, 58, 92, 0.3);
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 border;
+    color: var(--steel-800);
+    border-color: var(--steel-800);
+  }
+  .btn-secondary:hover {
+    background-color: var(--steel-100);
+  }
+
+  .btn-amber {
+    @apply px-4 py-2 rounded-md text-white text-sm font-medium transition-all duration-200;
+    background-color: var(--amber-500);
+  }
+  .btn-amber:hover {
+    background-color: var(--amber-600);
+    box-shadow: 0 2px 8px rgba(232, 145, 58, 0.3);
+  }
+
+  .input-field {
+    @apply w-full px-3 py-2 rounded-md border text-sm transition-colors duration-200 outline-none;
+    border-color: var(--gray-200);
+  }
+  .input-field:focus {
+    border-color: var(--steel-500);
+    box-shadow: 0 0 0 3px rgba(58, 124, 184, 0.1);
+  }
+
+  .status-badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+}

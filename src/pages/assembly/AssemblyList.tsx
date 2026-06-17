@@ -11,7 +11,7 @@ export default function AssemblyList() {
   const orders = useMemo(() => assemblyOrders, [assemblyOrders])
 
   return (
-    <div>
+    <div className="p-6">
       <PageHeader
         title="模具装配钳工"
         subtitle="管理模具装配工单与进度跟踪"
